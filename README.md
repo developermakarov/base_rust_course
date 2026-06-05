@@ -1,1 +1,0 @@
-# base_rust_course
