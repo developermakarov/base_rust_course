@@ -153,7 +153,11 @@ fn main() {
         io::stdout().flush().unwrap();
         let mut input_string = String::new();
         match io::stdin().read_line(&mut input_string) {
-            Ok(_) => {
+            Ok(n) => {
+                if n == 0{
+                    println!("\n EOF Bye Bye, MrTeamlead ^_^");
+                    break;
+                }
                 // лучше работать с чистыми строками
                 let input_string = input_string.trim();
                 let pipe_parts: Vec<&str> = input_string.split('|').map(|s| s.trim()).collect();
